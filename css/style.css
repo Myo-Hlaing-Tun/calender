@@ -1,0 +1,9 @@
+div>div>div>.image {
+    object-fit: cover;
+}
+
+.box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
