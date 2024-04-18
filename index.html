@@ -4,91 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MM-cupid</title>
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.rtl.min.css"
-        integrity="sha512-VNBisELNHh6+nfDjsFXDA6WgXEZm8cfTEcMtfOZdx0XTRoRbr/6Eqb2BjqxF4sNFzdvGIt+WqxKgn0DSfh2kcA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- custom css -->
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+    <title>Calender</title>
+    <link rel="stylesheet" href="l17style.css" type="text/css">
 </head>
 
-<body class="bg-info">
-    <div style="width: 33%;" class="bg-white mx-auto">
-        <div class="row d-flex justify-content-center mb-1 p-1">
-            <div class="col-sm-4">
-                <img src="./images/image1.webp" alt="" width="100%" height="80px" class="rounded image"
-                    data-toggle="modal" data-target="#exampleModal">
-            </div>
-            <div class="col-sm-4">
-                <img src="./images/image2.webp" alt="" width="100%" height="80px" class="rounded image"
-                    data-toggle="modal" data-target="#exampleModal">
-            </div>
-            <div class="col-sm-4">
-                <img src="./images/image3.webp" alt="" width="100%" height="80px" class="rounded image"
-                    data-toggle="modal" data-target="#exampleModal">
+<body>
+    <div class="container">
+        <div class="btn month-btn">
+            <span id="currmonth">Month<i class="fa-solid fa-angle-down"></i></span>
+            <div id="months" class="months dropdown">
+                <div class="dropdown-item">Jan</div>
+                <div class="dropdown-item">Feb</div>
+                <div class="dropdown-item">Mar</div>
+                <div class="dropdown-item">Apr</div>
+                <div class="dropdown-item">May</div>
+                <div class="dropdown-item">June</div>
             </div>
         </div>
-        <div class="row d-flex justify-content-center mb-1 p-1">
-            <div class="col-sm-4">
-                <img src="./images/image4.webp" alt="" width="100%" height="80px" class="rounded image"
-                    data-toggle="modal" data-target="#exampleModal">
-            </div>
-            <div class="col-sm-4">
-                <img src="./images/image5.webp" alt="" width="100%" height="80px" class="rounded image"
-                    data-toggle="modal" data-target="#exampleModal">
-            </div>
-            <div class="col-sm-4">
-                <img src="./images/image6.webp" alt="" width="100%" height="80px" class="rounded image"
-                    data-toggle="modal" data-target="#exampleModal">
+
+        <div class="btn year-btn">
+            <span id="curryear">Year<i class="fa-solid fa-angle-down"></i></span>
+            <div id="years" class="years dropdown">
+                <div class="dropdown-item">2000</div>
+                <div class="dropdown-item">2001</div>
+                <div class="dropdown-item">2002</div>
+                <div class="dropdown-item">2003</div>
+                <div class="dropdown-item">2004</div>
+                <div class="dropdown-item">2005</div>
             </div>
         </div>
-        <div class="row d-flex justify-content-center mb-1 p-1">
-            <div class="col-sm-4">
-                <img src="./images/image7.webp" alt="" width="100%" height="80px" class="rounded image"
-                    data-toggle="modal" data-target="#exampleModal">
+
+        <div class="clear"></div>
+
+        <div class="caldates">
+            <div class="days">
+                <label class="day dayname">Sun</label>
+                <label class="day dayname">Mon</label>
+                <label class="day dayname">Tue</label>
+                <label class="day dayname">Wed</label>
+                <label class="day dayname">Thu</label>
+                <label class="day dayname">Fri</label>
+                <label class="day dayname">Sat</label>
             </div>
-            <div class="col-sm-4">
-                <img src="./images/image8.webp" alt="" width="100%" height="80px" class="rounded image"
-                    data-toggle="modal" data-target="#exampleModal">
-            </div>
-            <div class="col-sm-4">
-                <img src="./images/image9.webp" alt="" width="100%" height="80px" class="rounded image"
-                    data-toggle="modal" data-target="#exampleModal">
+
+            <div class="clear"></div>
+
+            <div id="caldays" class="caldays days">
+                <label class="day none"></label>
+                <label class="day">1</label>
+                <label class="day">2</label>
+                <label class="day">3</label>
+                <label class="day">4</label>
+                <label class="day">5</label>
+                <label class="day">6</label>
+                <label class="day">7</label>
+                <label class="day">8</label>
+                <label class="day">9</label>
+                <label class="day">10</label>
+                <label class="day">11</label>
+                <label class="day">12</label>
+                <label class="day">13</label>
+                <label class="day">14</label>
+                <label class="day">15</label>
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content modal-sm" style="width: 45%; margin: auto;">
-                <div id="carousalexample" class="carousel" data-ride="carousel">
-                    <div class="carousel-inner">
-                    </div>
-                    <a class="carousel-control-prev" href="#carousalexample" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousalexample" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script src="./js/app.js"></script>
+    <script src="l17app.js"></script>
 </body>
 
 </html>
